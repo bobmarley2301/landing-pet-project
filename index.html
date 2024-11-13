@@ -10,10 +10,21 @@
 
 <!-- Header -->
 <header class="bg-blue-900 text-white p-5">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto flex items-center justify-between">
         <h1 class="text-3xl font-bold">Бізнес-аналітика</h1>
-        <nav>
-            <ul class="flex space-x-4">
+
+        <!-- Burger Icon (Mobile) -->
+        <div class="block lg:hidden">
+            <button id="burger-icon" class="text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation (Desktop) -->
+        <nav class="hidden lg:flex">
+            <ul class="flex space-x-6">
                 <li><a href="#about" class="hover:text-gray-300">Про нас</a></li>
                 <li><a href="#services" class="hover:text-gray-300">Послуги</a></li>
                 <li><a href="#gallery" class="hover:text-gray-300">Галерея</a></li>
@@ -23,11 +34,21 @@
     </div>
 </header>
 
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="lg:hidden bg-blue-900 text-white p-5 hidden">
+    <ul class="space-y-4">
+        <li><a href="#about" class="block hover:text-gray-300">Про нас</a></li>
+        <li><a href="#services" class="block hover:text-gray-300">Послуги</a></li>
+        <li><a href="#gallery" class="block hover:text-gray-300">Галерея</a></li>
+        <li><a href="#contact" class="block hover:text-gray-300">Контакти</a></li>
+    </ul>
+</div>
+
 <!-- Hero Section -->
 <section class="bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
-    <div class="bg-black bg-opacity-60 h-full flex items-center justify-center">
-        <div class="text-center text-white p-5">
-            <h2 class="text-5xl font-bold mb-4">Аналітика для вашого бізнесу</h2>
+    <div class="bg-black bg-opacity-60 h-full flex items-center justify-center px-4">
+        <div class="text-center text-white p-5 max-w-lg">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Аналітика для вашого бізнесу</h2>
             <p class="text-lg">"Розкрийте потенціал вашого бізнесу завдяки сучасним аналітичним інструментам."</p>
             <a href="#about" class="mt-5 inline-block bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Дізнатися більше</a>
         </div>
@@ -37,8 +58,8 @@
 <!-- About Section -->
 <section id="about" class="container mx-auto py-20 px-5 text-center">
     <h2 class="text-4xl font-bold mb-6">Про нас</h2>
-    <p class="text-lg">Ми спеціалізуємось на бізнес-аналітиці, яка допомагає компаніям покращити процеси, знизити витрати та збільшити продуктивність. Наші експерти використовують сучасні інструменти для аналізу та прогнозування, які дозволяють робити інформовані рішення та досягати нових висот.</p>
-    <p class="text-lg mt-4">Завдяки нашій підтримці, компанії отримують доступ до аналізу великих обсягів даних, що сприяє вдосконаленню управлінських рішень та підвищенню конкурентоспроможності. Ми працюємо з малим, середнім та великим бізнесом у різних секторах.</p>
+    <p class="text-lg">Ми спеціалізуємось на бізнес-аналітиці, яка допомагає компаніям покращити процеси, знизити витрати та збільшити продуктивність.</p>
+    <p class="text-lg mt-4">Завдяки нашій підтримці, компанії отримують доступ до аналізу великих обсягів даних, що сприяє вдосконаленню управлінських рішень.</p>
 </section>
 
 <!-- Services Section -->
@@ -49,17 +70,17 @@
             <div class="bg-white p-8 shadow-lg rounded">
                 <img src="https://images.unsplash.com/photo-1556741533-f6acd6474ae4" alt="Послуга 1" class="w-full h-40 object-cover rounded mb-4">
                 <h3 class="text-2xl font-semibold mb-4">Аналіз даних</h3>
-                <p>Допомагаємо збирати та інтерпретувати дані для прийняття інформованих рішень. Використовуємо сучасні методи аналізу для точного прогнозування результатів.</p>
+                <p>Допомагаємо збирати та інтерпретувати дані для прийняття інформованих рішень.</p>
             </div>
             <div class="bg-white p-8 shadow-lg rounded">
                 <img src="https://images.unsplash.com/photo-1565728744385-1c88e0c8a8a5" alt="Послуга 2" class="w-full h-40 object-cover rounded mb-4">
                 <h3 class="text-2xl font-semibold mb-4">Бізнес-прогнозування</h3>
-                <p>Створюємо прогнози для бізнесу, щоб передбачити майбутні тенденції та попит. Прогнозування на основі статистичних моделей дозволяє підготуватися до викликів ринку.</p>
+                <p>Створюємо прогнози для бізнесу, щоб передбачити майбутні тенденції та попит.</p>
             </div>
             <div class="bg-white p-8 shadow-lg rounded">
                 <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479" alt="Послуга 3" class="w-full h-40 object-cover rounded mb-4">
                 <h3 class="text-2xl font-semibold mb-4">Автоматизація процесів</h3>
-                <p>Оптимізуємо та автоматизуємо процеси для підвищення ефективності та продуктивності. Зменшення витрат та підвищення якості продукції завдяки інноваціям.</p>
+                <p>Оптимізуємо та автоматизуємо процеси для підвищення ефективності та продуктивності.</p>
             </div>
         </div>
     </div>
@@ -110,21 +131,19 @@
             <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
                 <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" class="w-6 h-6">
             </a>
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" class="w-6 h-6">
-            </a>
         </div>
-        <p class="mb-4">© 2024 Бізнес-аналітика. Всі права захищені.</p>
-        <div class="text-sm">
-            <a href="#about" class="text-gray-300 hover:underline">Про нас</a> |
-            <a href="#services" class="text-gray-300 hover:underline">Послуги</a> |
-            <a href="#gallery" class="text-gray-300 hover:underline">Галерея</a> |
-            <a href="#contact" class="text-gray-300 hover:underline">Контакти</a> |
-            <a href="#privacy-policy" class="text-gray-300 hover:underline">Політика конфіденційності</a> |
-            <a href="#terms-of-service" class="text-gray-300 hover:underline">Умови використання</a>
-        </div>
+        <p>&copy; 2024 Бізнес-аналітика</p>
+        <a href="/privacy" class="text-gray-300 hover:underline">Політика конфіденційності</a>
     </div>
 </footer>
+
+<script>
+    // Toggle Mobile Menu
+    document.getElementById("burger-icon").addEventListener("click", function () {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+    });
+</script>
 
 </body>
 </html>
